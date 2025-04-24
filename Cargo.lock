@@ -107,7 +107,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "pycatch"
+name = "pycatchrs"
 version = "0.1.0"
 dependencies = [
  "catch22",

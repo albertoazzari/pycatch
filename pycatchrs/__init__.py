@@ -1,11 +1,11 @@
-from pycatch import pycatch
+from pycatchrs import pycatchrs
 from typeguard import typechecked
 import numpy as np
 
 @typechecked
 def compute(x: np.ndarray, n:int) -> float:
-    return pycatch.compute(x, n)
+    return pycatchrs.compute(x, n)
 
 @typechecked
 def zscore(x: np.ndarray) -> np.ndarray:
-    return pycatch.zscore(x)
+    return pycatchrs.zscore(x)

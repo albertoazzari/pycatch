@@ -3,7 +3,7 @@ use pyo3::prelude::*;
 pub const N_CATCH22: usize = 25;
 
 #[pymodule]
-#[pyo3(name = "pycatch")]
+#[pyo3(name = "pycatchrs")]
 fn py_module(_py: Python, m: &Bound<PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(compute, m)?)?;
     m.add_function(wrap_pyfunction!(zscore, m)?)?;
