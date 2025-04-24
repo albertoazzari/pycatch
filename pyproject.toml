@@ -5,7 +5,7 @@ authors = [
   { name="Alberto Azzari", email="alberto.azzari@univr.it" },
 ]
 description = ""
-requires-python = ">=3.12"
+requires-python = ">=3.10"
 
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -26,5 +26,5 @@ build-backend = "maturin"
 features = ["pyo3/extension-module"]
 
 [project.urls]
-Homepage = "https://github.com/albertoazzari/pycatch22"
-Issues = "https://github.com/albertoazzari/pycatch22/issues"
+Homepage = "https://github.com/albertoazzari/pycatch"
+Issues = "https://github.com/albertoazzari/pycatch/issues"

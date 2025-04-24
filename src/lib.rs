@@ -1,14 +1,23 @@
 use pyo3::prelude::*;
 
-mod statistics;
-mod catch22;
-
 pub const N_CATCH22: usize = 25;
 
 #[pymodule]
 #[pyo3(name = "pycatch")]
 fn py_module(_py: Python, m: &Bound<PyModule>) -> PyResult<()> {
-    m.add_function(wrap_pyfunction!(catch22::compute, m)?)?;
-    m.add_function(wrap_pyfunction!(catch22::zscore, m)?)?;
+    m.add_function(wrap_pyfunction!(compute, m)?)?;
+    m.add_function(wrap_pyfunction!(zscore, m)?)?;
     Ok(())
+}
+
+#[pyfunction]
+#[pyo3(signature = (x, n))]
+pub fn compute(x: Vec<f64>, n: usize) -> f64 {
+    catch22::compute(&x, n)
+}
+
+#[pyfunction]
+#[pyo3(signature = (x))]
+pub fn zscore(x: Vec<f64>) -> Vec<f64> {
+    catch22::zscore(&x)
 }
